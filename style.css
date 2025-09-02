@@ -346,8 +346,7 @@ footer {
 
 /* You can also style the individual day squares */
 .ContributionCalendar-day {
-    border-radius: 2px;
-}
+    border-radius
 body.dark-mode {
     background-color: #181818;
     color: #f1f1f1;
