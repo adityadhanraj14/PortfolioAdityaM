@@ -326,3 +326,25 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Center the calendar horizontally */
+.contributions {
+    text-align: center;
+    padding: 20px 0; /* Add some vertical spacing */
+}
+
+/* Style the container of the calendar */
+.calendar {
+    margin: 0 auto; /* This centers a block-level element */
+    max-width: 900px; /* Optional: Sets a maximum width for a cleaner look */
+    /* Add a subtle shadow or border */
+    border: 1px solid #4a84d0;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #ffffff;
+    /* For dark mode, you might want to adjust colors */
+}
+
+/* You can also style the individual day squares */
+.ContributionCalendar-day {
+    border-radius: 2px;
+}
