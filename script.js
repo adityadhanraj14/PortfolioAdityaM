@@ -91,4 +91,38 @@ document.addEventListener('DOMContentLoaded', () => {
         
         lastScroll = currentScroll;
     });
+    // ================= Dark/Light Mode Toggle =================
+    const toggleButton = document.querySelector('.dark-mode-toggle');
+    const body = document.body;
+
+    // Get mode from localStorage or system
+    function getPreferredMode() {
+        const stored = localStorage.getItem('theme');
+        if (stored) {
+            return stored;
+        }
+        // Optionally, detect system dark mode preference
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // Set mode and persist
+    function setMode(mode) {
+        if (mode === 'dark') {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+        localStorage.setItem('theme', mode);
+    }
+
+    // Initial load
+    setMode(getPreferredMode());
+
+    // Toggle handler
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            const nowDark = !body.classList.contains('dark-mode');
+            setMode(nowDark ? 'dark' : 'light');
+        });
+    }
 });
