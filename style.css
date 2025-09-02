@@ -560,3 +560,8 @@ body.dark-mode .footer-contact-label {
     pointer-events: none;
     opacity: 0.8;
 }
+/* Reduce gap for Project on React section */
+.compact-section {
+    padding-top: 2.5rem !important;
+    margin-top: -4rem;
+}
